@@ -5,23 +5,38 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Turbo Racing Lab</title>
   <style>
-    :root{--bg:#090909;--panel:#151515;--text:#f4f4f4;--muted:#aaa;--red:#e50914;--gold:#ffcc33;}
+    :root{--bg:#090909;--panel:#151515;--text:#f4f4f4;--muted:#aaa;--red:#e50914;--gold:#ffcc33;--line:#2b2b2b;}
+    *{box-sizing:border-box}
     body{margin:0;font-family:Arial,Helvetica,sans-serif;background:radial-gradient(circle at top,#241010,#090909 52%);color:var(--text);}
-    main{max-width:980px;margin:0 auto;padding:48px 22px;}
-    .badge{display:inline-block;background:var(--red);color:white;padding:8px 12px;border-radius:999px;font-weight:700;letter-spacing:.04em;}
-    h1{font-size:clamp(38px,7vw,72px);line-height:.95;margin:22px 0 14px;}
+    main{max-width:1080px;margin:0 auto;padding:48px 22px;}
+    .badge{display:inline-block;background:var(--red);color:white;padding:8px 12px;border-radius:999px;font-weight:800;letter-spacing:.04em;}
+    h1{font-size:clamp(38px,7vw,74px);line-height:.95;margin:22px 0 14px;}
     p{color:var(--muted);font-size:18px;line-height:1.55;}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:32px;}
-    .card{background:linear-gradient(180deg,#1e1e1e,#101010);border:1px solid #2b2b2b;border-radius:18px;padding:18px;box-shadow:0 12px 30px rgba(0,0,0,.35);}
+    .hero{border:1px solid var(--line);background:linear-gradient(180deg,#191919,#0d0d0d);border-radius:28px;padding:28px;box-shadow:0 24px 80px rgba(0,0,0,.5)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:28px;}
+    .card{background:linear-gradient(180deg,#1e1e1e,#101010);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 12px 30px rgba(0,0,0,.35);}
     .card h2{margin:0 0 8px;font-size:20px;color:var(--gold);}
+    .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+    a.btn{display:inline-block;text-decoration:none;color:#fff;background:var(--red);padding:12px 16px;border-radius:12px;font-weight:900}
+    a.btn.secondary{background:#222;border:1px solid #444}
+    code{background:#050505;border:1px solid #333;border-radius:8px;padding:2px 6px;color:#fff}
     footer{margin-top:38px;color:#777;font-size:14px;}
   </style>
 </head>
 <body>
   <main>
-    <span class="badge">Turbo Racing Lab v0.0.0.1</span>
-    <h1>Garage digital para correr, medir y narrar.</h1>
-    <p>Base inicial para Spotters, Raceboards, Overlays OBS, Dashboards y Reportes HTML de Turbo Racing México y Vic's Pulse Timing.</p>
+    <section class="hero">
+      <span class="badge">Turbo Racing Lab v0.0.0.2</span>
+      <h1>Garage digital para correr, medir y narrar.</h1>
+      <p>Base central para Spotters, Raceboards, Overlays OBS, Dashboards y Reportes HTML de Turbo Racing México y Vic's Pulse Timing.</p>
+      <div class="btns">
+        <a class="btn" href="apps/spotter/">Abrir Spotter</a>
+        <a class="btn secondary" href="docs/VERSIONADO.md">Ver versionado</a>
+        <a class="btn secondary" href="CHANGELOG.md">Ver changelog</a>
+      </div>
+      <p>URL principal esperada: <code>https://autosrc1-art.github.io/turbo-racing-lab/</code></p>
+    </section>
+
     <section class="grid">
       <article class="card"><h2>🏁 Spotter</h2><p>Narrativa, TTS, Firebase, QTABLE y lógica de carrera.</p></article>
       <article class="card"><h2>📊 Raceboard</h2><p>Datos live, gaps, mejores vueltas, posiciones y visualización OBS.</p></article>
