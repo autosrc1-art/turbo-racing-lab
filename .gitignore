@@ -1,0 +1,17 @@
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Temporales
+*.tmp
+*.bak
+*.log
+
+# Exportaciones pesadas
+exports/
+renders/
+dist/
+
+# Datos sensibles
+.env
+*.secret
